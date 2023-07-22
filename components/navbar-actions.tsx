@@ -1,10 +1,11 @@
 "use client";
 
 import { ShoppingBag } from "lucide-react";
-import Button from "./ui/button";
+import Button from "./ui/myButton";
 import { useEffect, useState } from "react";
 import useCart from "@/hooks/use-cart";
 import { useRouter } from "next/navigation";
+import { ModeToggle } from "./theme-toggle";
 
 const NavbarActions = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -33,6 +34,7 @@ const NavbarActions = () => {
                     {cart.items.length}
                 </span>
             </Button>
+            <ModeToggle />
         </div>
     );
 }

@@ -3,6 +3,7 @@ import Container from "./ui/container";
 import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
+import { ModeToggle } from "./theme-toggle";
 
 export const revalidate = 0;
 
