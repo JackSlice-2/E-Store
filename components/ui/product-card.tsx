@@ -52,11 +52,11 @@ const ProductCard: React.FC<ProductCard> = ({
           <div className="flex gap-x-6 justify-center">
             <IconButton 
               onClick={onPreview}
-              icon={<Expand size={20} className="text-gray-600" />}
+              icon={<Expand size={20} className="text-gray-600 dark:text-white" />}
             />
             <IconButton
               onClick={onAddToCart}
-              icon={<ShoppingCart size={20} className="text-gray-600" />} 
+              icon={<ShoppingCart size={20} className="text-gray-600 dark:text-white" />} 
             />
           </div>
         </div>
