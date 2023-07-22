@@ -1,5 +1,3 @@
-"use client";
-
 import getAllProducts from "@/actions/get-all-products";
 import getBillboard from "@/actions/get-billboards";
 import ProductList from "@/components/product-list";
