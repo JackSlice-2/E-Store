@@ -37,3 +37,14 @@ export interface Color {
     name: string;
     value: string;
 }
+export interface Info {
+    id: string;
+    name: string;
+    billboardid: string;
+    icon: string;
+    phonenumber: string;
+    whatsapp: string;
+    instagram: string;
+    facebook: string;
+    email: string;
+}
