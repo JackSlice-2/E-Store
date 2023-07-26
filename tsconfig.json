@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(routes)/cart/components/pay-pal.jsx", "app/(routes)/cart/components/pay-palTWO.jsx"],
   "exclude": ["node_modules"]
 }
