@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -24,10 +25,14 @@ const PayPalButton = ({ clientId, totalPrice }) => {
     // Handle the payment approval here
     // You can send the payment data to your server and complete the transaction
     console.log('Payment Approved:', data);
-    const { orderID, payerID } = data;
+    const { orderID, payerID, paymentID, billingToken, facilitatorAccessToken, paymentSource } = data;
     const paymentData = {
       orderID,
       payerID,
+      paymentID,
+      billingToken,
+      facilitatorAccessToken,
+      paymentSource,
     };
 
     // Send the payment data to your backend for processing
