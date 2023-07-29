@@ -6,24 +6,21 @@ import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import axios from 'axios';
 
 const PayPalButton = ({ clientId, totalPrice }) => {
-  // Replace 'YOUR_ORDER_AMOUNT' with the actual order amount
-  const ORDER_AMOUNT = totalPrice; // In Brazilian Reals (BRL)
+  const ORDER_AMOUNT = totalPrice;
 
   const paypalOptions = {
     'client-id': clientId,
     currency: 'BRL',
   };
-
+//PayPal Button
   const paypalStyles = {
     color: 'blue',
     shape: 'rect',
     label: 'paypal',
-    height: 55, // Customize the button height here
+    height: 55,
   };
 
   const handleApprove = (data, actions) => {
-    // Handle the payment approval here
-    // You can send the payment data to your server and complete the transaction
     console.log('Payment Approved:', data);
     const { orderID, payerID, paymentID, billingToken, facilitatorAccessToken, paymentSource, totalPrice, ORDER_AMOUNT } = data;
     const paymentData = {
@@ -37,20 +34,17 @@ const PayPalButton = ({ clientId, totalPrice }) => {
       ORDER_AMOUNT
     };
 
-    // Send the payment data to your backend for processing
+    // Send payment data to backend
     axios.post(`${process.env.NEXT_PUBLIC_API_URL}/paypal`, paymentData)
       .then((response) => {
         console.log('Payment processing successful:', response.data);
-        // Optionally, you can handle the success response here, e.g., show a success message
       })
       .catch((error) => {
         console.error('Error processing PayPal payment:', error);
-        // Handle the error here, e.g., show an error message to the user
       });
   };
 
   const handleError = (error) => {
-    // Handle errors here
     console.error('PayPal Error:', error);
   };
 
