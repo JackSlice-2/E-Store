@@ -9,8 +9,8 @@ import Button from "@/components/ui/myButton";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
-import PayPalButtonsWrapper from "./pay-pal";
 import PayPalButton from "./pay-pal";
+import CalculateFreight from "./cep";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -64,6 +64,9 @@ const currency = "BRL"
       </Button>
       <div className="p-5">
       <PayPalButton clientId={clientId} totalPrice={totalPrice}/>
+    </div>
+    <div>
+      <CalculateFreight />
     </div>
     </div>
   );

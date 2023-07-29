@@ -25,7 +25,7 @@ const PayPalButton = ({ clientId, totalPrice }) => {
     // Handle the payment approval here
     // You can send the payment data to your server and complete the transaction
     console.log('Payment Approved:', data);
-    const { orderID, payerID, paymentID, billingToken, facilitatorAccessToken, paymentSource } = data;
+    const { orderID, payerID, paymentID, billingToken, facilitatorAccessToken, paymentSource, totalPrice, ORDER_AMOUNT } = data;
     const paymentData = {
       orderID,
       payerID,
@@ -33,6 +33,8 @@ const PayPalButton = ({ clientId, totalPrice }) => {
       billingToken,
       facilitatorAccessToken,
       paymentSource,
+      totalPrice,
+      ORDER_AMOUNT
     };
 
     // Send the payment data to your backend for processing
