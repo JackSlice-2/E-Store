@@ -93,14 +93,15 @@ const Footer: React.FC<InfoProps> = ({
                     className="hover:underline"> {data.name}</a>.  Todos Direitos Reservados.
                     </p>
 
-                    <p className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Criado e mantido por
+                    <div className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                        Criado e mantido por
                     <p>
                     <a href="https://www.afrotech.pro/"
                     className="hover:underline"> AfroTech</a></p>
                         <p className="text-xs">
                             Soluções em Software
                         </p> 
-                    </p>
+                    </div>
                     <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <a href={data.whatsapp} className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <PhoneIcon size={25} />
